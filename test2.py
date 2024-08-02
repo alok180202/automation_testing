@@ -7,9 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 from tabulate import tabulate
 
-# Specify the full path to the EdgeDriver executable using the Service class
-edge_service = Service(executable_path='C:\\Users\\aloka\\Downloads\\edgedriver_win64\\msedgedriver.exe')
-
+edge_driver_path = os.path.join(current_dir, 'drivers', 'msedgedriver.exe')
+edge_service = Service(executable_path=edge_driver_path)
 # Define the test cases (caseid, URL, username, password)
 test_cases = [
     (1, "https://www.saucedemo.com/", "standard_user", "secret_sauce"),
